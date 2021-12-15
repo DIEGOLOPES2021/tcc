@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">EveryPets</string>
+    <string-array name="porte">
+        <item>Porte</item>
+        <item>Pequeno</item>
+        <item>Medio</item>
+        <item>Grande</item>
+    </string-array>
+    <string-array name="especie">
+        <item>Especie</item>
+        <item>Cachorro</item>
+        <item>Gato</item>
+        <item>Avê</item>
+        <item>Roedores</item>
+    </string-array>
+    <string-array name="raca">
+        <item>Raça do Pet</item>
+        <item>PUG</item>
+        <item>MALTÊS</item>
+        <item>SHIH TZU</item>
+        <item>BULDOGUE</item>
+        <item>PIT BULL</item>
+        <item>SPITZ ALEMÃO</item>
+        <item>DACHSHUND</item>
+        <item>PASTOR-ALEMÃO</item>
+        <item>BASSET</item>
+        <item>SCHNAUZER</item>
+        <item>POODLE</item>
+        <item>ROTTWEILER</item>
+        <item>LABRADOR</item>
+        <item>PINSCHER</item>
+        <item>LHASA APSO</item>
+        <item>GOLDEN RETRIEVER</item>
+        <item>YORKSHIRE</item>
+        <item>BODER COLLIE</item>
+        <item>BEAGLE</item>
+        <item>VIRA_LATA</item>
+        <item>OUTRO</item>
+    </string-array>
+    <string-array name="estados">
+        <item>Estado</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+        <item>DF</item>
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

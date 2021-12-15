@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secundaria"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ed_sair"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/sair"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="336dp"
+            android:layout_height="540dp"
+            android:layout_marginTop="65dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:text="Localização"
+                android:textColor="@color/black"
+                android:textSize="37sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black">
+                <!--
+                             <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_cep"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.48"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.144"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_cep"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:hint="CEP"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:shadowColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Spinner
+                    android:id="@+id/ed_estado"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edit_text"
+                    android:entries="@array/estados"
+                    android:hint="Estado"
+                    android:padding="3dp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_bairro"
+                    app:layout_constraintStart_toStartOf="@+id/et_bairro"
+                    app:layout_constraintTop_toBottomOf="@+id/et_bairro" />
+  -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_cep"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.48"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.144"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_cep"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:hint="CEP"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:shadowColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_rua"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_cep"
+                    app:layout_constraintStart_toStartOf="@+id/et_cep"
+                    app:layout_constraintTop_toBottomOf="@+id/et_cep"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_rua"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:hint="Rua"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:shadowColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_numero"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_rua"
+                    app:layout_constraintStart_toStartOf="@+id/et_rua"
+                    app:layout_constraintTop_toBottomOf="@+id/et_rua"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_numero"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:hint="N°"
+                        android:inputType="text"
+                        android:maxLength="200"
+                        android:shadowColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_bairro"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_numero"
+                    app:layout_constraintStart_toStartOf="@+id/et_numero"
+                    app:layout_constraintTop_toBottomOf="@+id/et_numero"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_bairro"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:hint="Bairro"
+                        android:inputType="text"
+                        android:maxLength="200"
+                        android:shadowColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/et_estado"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edit_text"
+                    android:entries="@array/estados"
+                    android:hint="Estado"
+                    android:padding="3dp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_bairro"
+                    app:layout_constraintStart_toStartOf="@+id/et_bairro"
+                    app:layout_constraintTop_toBottomOf="@+id/et_bairro" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_Cidade"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_estado"
+                    app:layout_constraintStart_toStartOf="@+id/et_estado"
+                    app:layout_constraintTop_toBottomOf="@+id/et_estado"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_cidade"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:hint="Cidade"
+                        android:maxLength="100"
+                        android:shadowColor="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_localizacao"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="20dp"
+                    android:padding="16dp"
+                    android:text="Proximo"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/primary"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.615"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_Cidade" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

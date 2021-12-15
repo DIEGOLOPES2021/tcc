@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/menu"
+           android:layout_width="match_parent"
+           android:layout_height="80dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/alimentos"
+           app:layout_constraintVertical_bias="1.0">
+
+           <ImageButton
+               android:id="@+id/img_buscar"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginStart="32dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:srcCompat="@drawable/sair" />
+
+           <ImageButton
+               android:id="@+id/img_pedidos"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginStart="24dp"
+               android:layout_marginEnd="24dp"
+               app:layout_constraintBottom_toBottomOf="@+id/img_buscar"
+               app:layout_constraintEnd_toStartOf="@+id/img_home"
+               app:layout_constraintStart_toEndOf="@+id/img_buscar"
+               app:layout_constraintTop_toTopOf="@+id/img_buscar"
+               app:srcCompat="@drawable/sair" />
+
+           <ImageButton
+               android:id="@+id/img_home"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginStart="24dp"
+               app:layout_constraintBottom_toBottomOf="@+id/img_pedidos"
+               app:layout_constraintStart_toEndOf="@+id/img_pedidos"
+               app:layout_constraintTop_toTopOf="@+id/img_pedidos"
+               app:srcCompat="@drawable/sair" />
+
+           <ImageButton
+               android:id="@+id/img_home2"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginStart="24dp"
+               app:layout_constraintBottom_toBottomOf="@+id/img_home"
+               app:layout_constraintStart_toEndOf="@+id/img_home"
+               app:layout_constraintTop_toTopOf="@+id/img_home"
+               app:srcCompat="@drawable/sair" />
+
+           <ImageButton
+               android:id="@+id/img_home3"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginEnd="24dp"
+               app:layout_constraintBottom_toBottomOf="@+id/img_home2"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toEndOf="@+id/img_home2"
+               app:layout_constraintTop_toTopOf="@+id/img_home2"
+               app:srcCompat="@drawable/sair" />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/header"
+           android:layout_width="match_parent"
+           android:layout_height="120dp"
+           android:background="@color/primary"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_foto"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:layout_marginStart="24dp"
+               app:cardCornerRadius="50dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <ImageView
+                   android:id="@+id/iv_profile"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="centerCrop"
+                   app:srcCompat="@drawable/goldenn" />
+           </androidx.cardview.widget.CardView>
+
+           <TextView
+               android:id="@+id/tv_profile_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="I Pets"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:textColor="@android:color/white"
+               android:textSize="30sp"
+               android:textStyle="bold"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/card_foto" />
+
+           <TextView
+               android:id="@+id/tv_sub_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="PetShop"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:textColor="@android:color/white"
+               android:textSize="18sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+           <TextView
+               android:id="@+id/tv_localizacao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:text="Brasileira - 6,2Km"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:textColor="@android:color/black"
+               android:textSize="18sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_sub_name" />
+
+           <ImageView
+               android:id="@+id/imageView"
+               android:layout_width="58dp"
+               android:layout_height="60dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:srcCompat="@drawable/ic_launcher_menu_foreground" />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/servicos"
+           android:layout_width="match_parent"
+           android:layout_height="135dp"
+           android:background="@color/white"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/header">
+
+
+           <TextView
+               android:id="@+id/textView7"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Alimentos"
+               android:textColor="@color/black"
+               app:layout_constraintEnd_toEndOf="@+id/card_item_3"
+               app:layout_constraintStart_toStartOf="@+id/card_item_3"
+               app:layout_constraintTop_toBottomOf="@+id/card_item_3" />
+
+           <TextView
+               android:id="@+id/textView6"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Roupas"
+               android:textColor="@color/black"
+               app:layout_constraintEnd_toEndOf="@+id/card_item_2"
+               app:layout_constraintStart_toStartOf="@+id/card_item_2"
+               app:layout_constraintTop_toBottomOf="@+id/card_item_2" />
+
+           <TextView
+               android:id="@+id/textView5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Brinquedos"
+               android:textColor="@color/black"
+               app:layout_constraintEnd_toEndOf="@+id/card_itens"
+               app:layout_constraintStart_toStartOf="@+id/card_itens"
+               app:layout_constraintTop_toBottomOf="@+id/card_itens" />
+
+           <TextView
+               android:id="@+id/tv_titulo_servicos"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:text="Serviços"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:textColor="@android:color/black"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               app:layout_constraintEnd_toEndOf="@+id/servicos"
+               app:layout_constraintStart_toStartOf="@+id/servicos"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_itens"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginTop="-10dp"
+               android:layout_marginEnd="16dp"
+               app:cardCornerRadius="50dp"
+               app:layout_constraintBottom_toBottomOf="@+id/servicos"
+               app:layout_constraintEnd_toStartOf="@+id/card_item_2"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_titulo_servicos">
+
+               <ImageView
+                   android:id="@+id/iv_foto_servico"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="centerCrop"
+                   app:srcCompat="@drawable/goldenn" />
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_item_2"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginTop="-10dp"
+               app:cardCornerRadius="50dp"
+               app:layout_constraintBottom_toBottomOf="@+id/servicos"
+               app:layout_constraintEnd_toEndOf="@+id/tv_titulo_servicos"
+               app:layout_constraintStart_toStartOf="@+id/tv_titulo_servicos"
+               app:layout_constraintTop_toBottomOf="@+id/tv_titulo_servicos">
+
+               <ImageView
+                   android:id="@+id/iv_foto_servico_2"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="centerCrop"
+                   app:srcCompat="@drawable/goldenn" />
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_item_3"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="-10dp"
+               app:cardCornerRadius="50dp"
+               app:layout_constraintBottom_toBottomOf="@+id/servicos"
+               app:layout_constraintEnd_toEndOf="@+id/servicos"
+               app:layout_constraintStart_toEndOf="@+id/card_item_2"
+               app:layout_constraintTop_toBottomOf="@+id/tv_titulo_servicos">
+
+               <ImageView
+                   android:id="@+id/iv_foto_servico_3"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="centerCrop"
+                   app:srcCompat="@drawable/goldenn" />
+
+           </androidx.cardview.widget.CardView>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/constraintLayout3"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@color/primary"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/servicos">
+
+           <TextView
+               android:id="@+id/title_alimentos"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Alimentos"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/alimentos"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/white"
+           app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+           tools:layout_editor_absoluteX="-54dp">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView"
+               android:layout_width="120dp"
+               android:layout_height="190dp"
+               android:layout_marginStart="8dp"
+               android:layout_marginTop="16dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/item1"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/imgItem1"
+                       android:layout_width="0dp"
+                       android:layout_height="80dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       tools:srcCompat="@tools:sample/avatars" />
+
+                   <TextView
+                       android:id="@+id/textViewItem1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="4dp"
+                       android:text="Whiskas"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/imgItem1" />
+
+                   <TextView
+                       android:id="@+id/textView2Item1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text=" de R$ 10"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textViewItem1" />
+
+                   <TextView
+                       android:id="@+id/textView3Item1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:text="Por R$8,50"
+                       android:textColor="#FF5722"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView2Item1" />
+
+                   <Button
+                       android:id="@+id/buttonItem1"
+                       android:layout_width="0dp"
+                       android:layout_height="38dp"
+                       android:text="Comprar"
+                       android:textSize="12sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.659"
+                       app:layout_constraintStart_toStartOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView2"
+               android:layout_width="120dp"
+               android:layout_height="190dp"
+               android:layout_marginTop="16dp"
+               app:layout_constraintEnd_toStartOf="@+id/cardView3"
+               app:layout_constraintStart_toEndOf="@+id/cardView"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/item2"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/imgItem2"
+                       android:layout_width="0dp"
+                       android:layout_height="80dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       tools:srcCompat="@tools:sample/avatars" />
+
+                   <TextView
+                       android:id="@+id/textViewItem2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="4dp"
+                       android:text="Whiskas"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/imgItem2" />
+
+                   <TextView
+                       android:id="@+id/textView2Item2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text=" de R$ 10"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textViewItem2" />
+
+                   <TextView
+                       android:id="@+id/textView3Item2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:text="Por R$8,50"
+                       android:textColor="#FF5722"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView2Item2" />
+
+                   <Button
+                       android:id="@+id/buttonItem2"
+                       android:layout_width="0dp"
+                       android:layout_height="38dp"
+                       android:text="Comprar"
+                       android:textSize="12sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.659"
+                       app:layout_constraintStart_toStartOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView3"
+               android:layout_width="120dp"
+               android:layout_height="190dp"
+               android:layout_marginTop="16dp"
+               android:layout_marginEnd="8dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/item3"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/imgItem3"
+                       android:layout_width="0dp"
+                       android:layout_height="80dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       tools:srcCompat="@tools:sample/avatars" />
+
+                   <TextView
+                       android:id="@+id/textViewItem3"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="4dp"
+                       android:text="Whiskas"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/imgItem3" />
+
+                   <TextView
+                       android:id="@+id/textView2Item3"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text=" de R$ 10"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textViewItem3" />
+
+                   <TextView
+                       android:id="@+id/textView3Item3"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:text="Por R$8,50"
+                       android:textColor="#FF5722"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView2Item3" />
+
+                   <Button
+                       android:id="@+id/buttonItem3"
+                       android:layout_width="0dp"
+                       android:layout_height="38dp"
+                       android:text="Comprar"
+                       android:textSize="12sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.659"
+                       app:layout_constraintStart_toStartOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView4"
+               android:layout_width="120dp"
+               android:layout_height="190dp"
+               android:layout_marginTop="16dp"
+               app:layout_constraintEnd_toEndOf="@+id/cardView"
+               app:layout_constraintStart_toStartOf="@+id/cardView"
+               app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/item4"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/imgItem4"
+                       android:layout_width="0dp"
+                       android:layout_height="80dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       tools:srcCompat="@tools:sample/avatars" />
+
+                   <TextView
+                       android:id="@+id/textViewItem4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="4dp"
+                       android:text="Whiskas"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/imgItem4" />
+
+                   <TextView
+                       android:id="@+id/textView2Item4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text=" de R$ 10"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textViewItem4" />
+
+                   <TextView
+                       android:id="@+id/textView3Item4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:text="Por R$8,50"
+                       android:textColor="#FF5722"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView2Item4" />
+
+                   <Button
+                       android:id="@+id/buttonItem4"
+                       android:layout_width="0dp"
+                       android:layout_height="38dp"
+                       android:text="Comprar"
+                       android:textSize="12sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.659"
+                       app:layout_constraintStart_toStartOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView5"
+               android:layout_width="120dp"
+               android:layout_height="190dp"
+               app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+               app:layout_constraintEnd_toEndOf="@+id/cardView2"
+               app:layout_constraintStart_toStartOf="@+id/cardView2"
+               app:layout_constraintTop_toTopOf="@+id/cardView4">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/item5"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/imgItem5"
+                       android:layout_width="0dp"
+                       android:layout_height="80dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       tools:srcCompat="@tools:sample/avatars" />
+
+                   <TextView
+                       android:id="@+id/textViewItem5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="4dp"
+                       android:text="Whiskas"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/imgItem5" />
+
+                   <TextView
+                       android:id="@+id/textView2Item5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text=" de R$ 10"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textViewItem5" />
+
+                   <TextView
+                       android:id="@+id/textView3Item5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:text="Por R$8,50"
+                       android:textColor="#FF5722"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView2Item5" />
+
+                   <Button
+                       android:id="@+id/buttonItem5"
+                       android:layout_width="0dp"
+                       android:layout_height="38dp"
+                       android:text="Comprar"
+                       android:textSize="12sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.659"
+                       app:layout_constraintStart_toStartOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView6"
+               android:layout_width="120dp"
+               android:layout_height="190dp"
+               app:layout_constraintBottom_toBottomOf="@+id/cardView5"
+               app:layout_constraintEnd_toEndOf="@+id/cardView3"
+               app:layout_constraintStart_toStartOf="@+id/cardView3"
+               app:layout_constraintTop_toTopOf="@+id/cardView5">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/item6"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/imgItem6"
+                       android:layout_width="0dp"
+                       android:layout_height="80dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       tools:srcCompat="@tools:sample/avatars" />
+
+                   <TextView
+                       android:id="@+id/textViewItem6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="4dp"
+                       android:text="Whiskas"
+                       android:textColor="#000000"
+                       android:textSize="14sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/imgItem6" />
+
+                   <TextView
+                       android:id="@+id/textView2Item6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text=" de R$ 10"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textViewItem6" />
+
+                   <TextView
+                       android:id="@+id/textView3Item6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:text="Por R$8,50"
+                       android:textColor="#FF5722"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/textView2Item6" />
+
+                   <Button
+                       android:id="@+id/buttonItem6"
+                       android:layout_width="0dp"
+                       android:layout_height="38dp"
+                       android:text="Comprar"
+                       android:textSize="12sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.659"
+                       app:layout_constraintStart_toStartOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </androidx.cardview.widget.CardView>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

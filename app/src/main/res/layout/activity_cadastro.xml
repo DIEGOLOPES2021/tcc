@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secundaria"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/ed_sair"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/sair"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="334dp"
+        android:layout_height="415dp"
+        android:layout_marginTop="65dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="Cadastre-se"
+            android:textColor="@color/black"
+            android:textSize="37sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_nome"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:maxLength="120"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.180"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_nome"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:hint="Nome"
+                    android:inputType="textImeMultiLine"
+                    android:maxLength="120"
+                    android:shadowColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--
+          <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_nome"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                android:maxLength="120"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.212">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_nome"
+                    android:layout_width="310dp"
+                    android:maxLength="120"
+                    android:layout_height="50dp"
+                    android:hint="Nome"
+                    android:inputType="textImeMultiLine"
+                    android:shadowColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+        -->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_data_nascimento"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLength="120"
+                app:layout_constraintEnd_toEndOf="@+id/et_nome"
+                app:layout_constraintStart_toStartOf="@+id/et_nome"
+                app:layout_constraintTop_toBottomOf="@+id/et_nome"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_data_nascimento"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:focusable="false"
+                    android:hint="Data nascimento"
+                    android:inputType="textImeMultiLine"
+                    android:maxLength="120"
+                    android:shadowColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_telefone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLength="11"
+                app:layout_constraintEnd_toEndOf="@+id/et_data_nascimento"
+                app:layout_constraintStart_toStartOf="@+id/et_data_nascimento"
+                app:layout_constraintTop_toBottomOf="@+id/et_data_nascimento"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_telefone"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:hint="Telefone"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:shadowColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_cpf"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/et_telefone"
+                app:layout_constraintStart_toStartOf="@+id/et_telefone"
+                app:layout_constraintTop_toBottomOf="@+id/et_telefone"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_cpf"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:hint="CPF"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:shadowColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_login_cadastro_usuario"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="20dp"
+                android:padding="16dp"
+                android:text="Entrar"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+
+
+                app:cornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/et_cpf"
+                app:layout_constraintStart_toStartOf="@+id/et_cpf"
+                app:layout_constraintTop_toBottomOf="@+id/et_cpf" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="420dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="-60dp"
+                android:src="@drawable/fundopts"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.512"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

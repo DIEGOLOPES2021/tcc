@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_pesquisa"
+        android:title="Pesquisar"
+        android:icon="@drawable/search_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/menu_carrinho"
+        android:title="Carrinho"
+        android:icon="@drawable/cart_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="Início"
+        android:icon="@drawable/home_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/menu_perfil"
+        android:title="Perfil"
+        android:icon="@drawable/person_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/menu_meu_pet"
+        android:icon="@drawable/ic_baseline_pets_24"
+        android:title="Meus Pets"
+        app:showAsAction="always" />
+
+</menu>
